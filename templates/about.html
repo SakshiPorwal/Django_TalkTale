@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock title %}
+
+{% block content %}
+
+<div class='bg-gray-800 text-white p-3 md:px-10 lg:px-20 xl:px-40 2xl:px-72'>
+    <div class='m-6'>
+        <p style="font-family: Poppins-Bold" class='text-4xl font-extrabold yourstory-5 text-center md:text-start'>About TalkTale</p>
+        {% comment %} <p class='text-2xl font-bold grid place-items-center mb-8'>About TalkTale!</p> {% endcomment %}
+        <br><br>
+        <p class='text-justify'>
+            &#128075; Welcome to TalkTale!<br><br>
+
+            Dive into the world of TalkTale and explore a diverse range of blogs that cover various topics and interests. Whether you're passionate about travel, food, technology, personal development, or any other subject, you'll find a place for your voice to be heard and appreciated.<br><br>
+            
+            We encourage our bloggers to embrace creativity and authenticity, allowing their unique perspectives and stories to shine through. From captivating narratives to informative articles, our platform hosts all kinds of blogs that cater to different tastes and preferences.<br><br>
+            
+            Whether you're an aspiring writer, a seasoned blogger, or simply someone who loves to read and engage with thought-provoking content, TalkTale is the perfect destination for you. Discover new ideas, gain insights, and connect with like-minded individuals who share your interests.<br><br>
+
+            Join our growing community today and be a part of the TalkTale journey. Start reading, writing, and sharing your own stories that inspire, entertain, and spark conversations.<br><br>
+
+        </p>
+        <div class='my-10'>
+            <p style="font-family: Poppins-Bold" class='text-4xl font-extrabold yourstory-5 text-center md:text-start'>Categories</p>
+            {% comment %} <p class='text-2xl font-bold grid place-items-center mb-8'>Choose your Category!</p> {% endcomment %}
+            <div class='grid grid-cols-1 md:grid-cols-2 md:space-x-4 lg:space-x-10'>
+                <div>
+                    <div class='my-3'>
+                        <p class="text-base font-medium my-3">Tech</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="tech bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full"></div>
+                        </div>  
+                    </div>
+                    <div class='my-3'>
+                        <p class="text-base font-medium my-3">Travel</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="food bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+                    <div class='my-3'>
+                        <p class="text-base font-medium my-3">Food</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="fitness bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+                </div>
+
+                <div>
+                    <div class='my-3'>
+                        <p class="text-base font-medium my-3">YourStory</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="travel bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+                    <div class='my-3'>
+                        <p class="progress-bar text-base font-medium my-3">Fitness</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="yourstory bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+                    <div class='my-3'>
+                        <p class="text-base font-medium my-3">Spiritual</p>
+                        <div class="progress-bar w-full md:w-80 lg:w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="travel bg-gradient-to-r from-cyan-300 to-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        
+        .progress-bar {
+            animation: progress-bar-animation 1s normal forwards;
+        }
+        @keyframes progress-bar-animation {
+            0%   {  width: 0%; }
+            100% {  width: 100%; }
+        }
+        .tech {
+            animation: tech-animation 3s normal forwards;
+        }
+        @keyframes tech-animation {
+            0%   {  width: 0%; }
+            100% {  width: 95%; }
+        }
+        .travel {
+            animation: travel-animation 3s normal forwards
+        }
+        @keyframes travel-animation {
+            0%   {  width: 0%; }
+            100% {  width: 85%; }
+        }
+        .food {
+            animation: food-animation 3s normal forwards
+        }
+        @keyframes food-animation {
+            0%   {  width: 0%; }
+            100% {  width: 70%; }
+        }
+        .yourstory {
+            animation: yourstory-animation 3s normal forwards
+        }
+        @keyframes yourstory-animation {
+            0%   {  width: 0%; }
+            100% {  width: 90%; }
+        }
+        .fitness {
+            animation: fitness-animation 3s normal forwards
+        }
+        @keyframes fitness-animation {
+            0%   {  width: 0%; }
+            100% {  width: 80%; }
+        }
+        .spiritual {
+            animation: spiritual-animation 3s normal forwards
+        }
+        @keyframes spiritual-animation {
+            0%   {  width: 0%; }
+            100% {  width: 80%; }
+        }
+    </style>
+
+    {% comment %} <script>
+        let tech_progress = 0;
+        let tech_invervalSpeed = 10;
+        let tech_incrementSpeed = 1;
+        document.addEventListener("DOMContentLoaded", function(){
+            let tech_bar = document.querySelector('.tech');
+            tech_progressInterval = setInterval(function(){
+            tech_progress += tech_incrementSpeed;
+            tech_bar.style.width = tech_progress + "%";
+            if(tech_progress >= 95){
+                clearInterval(tech_progressInterval);
+            }
+        }, tech_invervalSpeed);
+    });
+
+        let travel_progress = 0;
+        let travel_invervalSpeed = 10;
+        let travel_incrementSpeed = 1;
+        document.addEventListener("DOMContentLoaded", function(){
+            let travel_bar = document.querySelector('.travel');
+            travel_progressInterval = setInterval(function(){
+            travel_progress += travel_incrementSpeed;
+            travel_bar.style.width = travel_progress + "%";
+            if(travel_progress >= 80){
+                clearInterval(travel_progressInterval);
+            }
+        }, travel_invervalSpeed);
+    });
+
+        let food_progress = 0;
+        let food_invervalSpeed = 10;
+        let food_incrementSpeed = 1;
+        document.addEventListener("DOMContentLoaded", function(){
+            let food_bar = document.querySelector('.food');
+            food_progressInterval = setInterval(function(){
+            food_progress += food_incrementSpeed;
+            food_bar.style.width = food_progress + "%";
+            if(food_progress >= 60){
+                clearInterval(food_progressInterval);
+            }
+        }, food_invervalSpeed);
+    });
+
+        let yourstory_progress = 0;
+        let yourstory_invervalSpeed = 10;
+        let yourstory_incrementSpeed = 1;
+        document.addEventListener("DOMContentLoaded", function(){
+            let yourstory_bar = document.querySelector('.yourstory');
+            yourstory_progressInterval = setInterval(function(){
+            yourstory_progress += yourstory_incrementSpeed;
+            yourstory_bar.style.width = yourstory_progress + "%";
+            if(yourstory_progress >= 80){
+                clearInterval(yourstory_progressInterval);
+            }
+        }, yourstory_invervalSpeed);
+    });
+
+        let fitness_progress = 0;
+        let fitness_invervalSpeed = 10;
+        let fitness_incrementSpeed = 1;
+        document.addEventListener("DOMContentLoaded", function(){
+            let fitness_bar = document.querySelector('.fitness');
+            fitness_progressInterval = setInterval(function(){
+            fitness_progress += fitness_incrementSpeed;
+            fitness_bar.style.width = fitness_progress + "%";
+            if(fitness_progress >= 85){
+                clearInterval(fitness_progressInterval);
+            }
+        }, fitness_invervalSpeed);
+    });
+
+        let spiritual_progress = 0;
+        let spiritual_invervalSpeed = 10;
+        let spiritual_incrementSpeed = 1;
+        document.addEventListener("DOMContentLoaded", function(){
+            let spiritual_bar = document.querySelector('.spiritual');
+            spiritual_progressInterval = setInterval(function(){
+            spiritual_progress += spiritual_incrementSpeed;
+            spiritual_bar.style.width = spiritual_progress + "%";
+            if(spiritual_progress >= 85){
+                clearInterval(spiritual_progressInterval);
+            }
+        }, spiritual_invervalSpeed);
+    });
+    </script> {% endcomment %}
+</div>
+
+{% endblock %}
